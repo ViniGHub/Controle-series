@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ControllerEpisodes;
 use App\Http\Controllers\ControllerSeasons;
 use App\Http\Controllers\ControllerSeries;
 use Illuminate\Support\Facades\Route;
@@ -24,5 +25,7 @@ Route::get('/ola', function () { ?>
 <?php });
 
 Route::resource('/series', ControllerSeries::class)->except(['show']);
+
+Route::get('/episodes', [ControllerEpisodes::class, 'index'])->name('episodes.index');
 
 Route::get('/series/{series}/seasons', [ControllerSeasons::class, 'index'])->name('seasons.index');
