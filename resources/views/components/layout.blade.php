@@ -14,9 +14,9 @@
 </head>
 
 <body>
-    <div class="d-flex row w-100 h-100">
-        <aside class="p-4 d-flex flex-column col-3 ">
-            <h1><a href="#"><img src="https://fontmeme.com/permalink/230801/ea5a4bc126828c9d792681daf3f76ed3.png"
+    <div class="d-flex row w-100 cont">
+        <aside class="p-4 d-flex flex-column justify-center col-3 ">
+            <h1 class="align-self-center"><a href="{{ route('series.index') }}"><img src="https://fontmeme.com/permalink/230801/ea5a4bc126828c9d792681daf3f76ed3.png"
                         alt="fonte-bebas-neue" border="0"></a></h1>
             <a href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25"
@@ -45,7 +45,7 @@
                 </div>
 
             @endif
-            <h2>{{ $title }}</h2>
+            <h2 class="text-light title">{{ $title }}</h2>
 
             {{ $slot }}
         </main>

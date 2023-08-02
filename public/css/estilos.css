@@ -1,6 +1,6 @@
 aside a {
     text-decoration: none;
-    color: rgb(121, 121, 121);
+    color: rgb(255, 0, 0);
     margin-left: 10px;
     
 }
@@ -8,4 +8,77 @@ aside a {
 a svg {
     margin-right: 10px;
     color: red;
+}
+
+li > a {
+    text-decoration: none;
+    color: #000000;
+    transition: .3s;
+}
+
+li > a:hover {
+    transform: scale(1.05);
+    color: #333;
+}
+
+.cont {
+    background: rgb(50,50,50);
+    height: 100vh;
+}
+
+.cont > aside {
+    background:rgb(35,35,35) ;
+}
+
+.title {
+    width: min-content;
+}
+
+.cont > aside::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    background: linear-gradient(to bottom, black, rgb(50,50,50) 90%);
+    left: calc(24vw);
+    width:7px;
+    height: 100vh;
+}
+
+.back-cinema {
+    background: url('../img/cinema.jfif') 1%;
+    font-weight: 900;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: .5s;
+}
+
+ul > li {
+    background: rgb(255, 255, 255);
+}
+
+.btn-popcorn {
+    width: 25%;
+    font-weight: 700;
+    font-size: 30px;
+    /* text-shadow: 0 5px 7px rgba(255, 255, 255, 0.3); */
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
+    background: rgb(255, 255, 255);
+}
+
+.btn-popcorn:hover {
+    background: rgb(100,100,100);
+}
+
+.btn-popcorn:hover .back-cinema {
+    color: #fff;
+}
+
+@keyframes move-image {
+    50% {
+        background-size: 110%;
+    }
 }
