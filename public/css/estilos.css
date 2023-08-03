@@ -1,8 +1,13 @@
 aside a {
     text-decoration: none;
     color: rgb(255, 0, 0);
-    margin-left: 10px;
+    transition: .75s;
     
+}
+
+.icon-edit {
+    position: absolute;
+    top: 100px;
 }
 
 a svg {
@@ -10,38 +15,42 @@ a svg {
     color: red;
 }
 
-li > a {
+li>a {
     text-decoration: none;
     color: #000000;
     transition: .3s;
 }
 
-li > a:hover {
+li>a:hover {
     transform: scale(1.05);
     color: #333;
 }
 
 .cont {
-    background: rgb(50,50,50);
+    background: rgb(50, 50, 50);
     height: 100vh;
 }
 
-.cont > aside {
-    background:rgb(35,35,35) ;
+.cont>aside {
+    background: rgb(35, 35, 35);
+    width: 7vw;
+    transition: 0.75s;
+    transition-timing-function: ease;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to bottom, black, transparent);
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 0;
 }
 
 .title {
     width: min-content;
 }
 
-.cont > aside::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    background: linear-gradient(to bottom, black, rgb(50,50,50) 90%);
-    left: calc(24vw);
-    width:7px;
-    height: 100vh;
+a>img {
+    width: 80px;
 }
 
 .back-cinema {
@@ -56,7 +65,7 @@ li > a:hover {
     transition: .5s;
 }
 
-ul > li {
+ul>li {
     background: rgb(255, 255, 255);
 }
 
@@ -70,7 +79,7 @@ ul > li {
 }
 
 .btn-popcorn:hover {
-    background: rgb(100,100,100);
+    background: rgb(100, 100, 100);
 }
 
 .btn-popcorn:hover .back-cinema {

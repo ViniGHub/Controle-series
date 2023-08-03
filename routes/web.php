@@ -24,8 +24,8 @@ Route::get('/ola', function () { ?>
     <h1 style="display: grid; place-items: center;">Olá Mundo</h1>
 <?php });
 
-Route::resource('/series', ControllerSeries::class)->except(['show']);
-
-Route::get('/episodes', [ControllerEpisodes::class, 'index'])->name('episodes.index');
+// Route::resource('/series', ControllerSeries::class)->except(['show']);
 
 Route::get('/series/{series}/seasons', [ControllerSeasons::class, 'index'])->name('seasons.index');
+
+Route::get('/seasons/{season}/episodes', [ControllerEpisodes::class, 'index'])->name('episodes.index');

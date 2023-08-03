@@ -1,10 +1,10 @@
-<x-layout title="Séries">
+<x-layout title="ViniFlix">
 
     @if ($mensagem)
         <h3 class="alert alert-success"> {{ $mensagem }} </h3>
     @endif
-    <div class="my-2">
-        <ul class="list-group">
+    <div class="my-2 w-100 d-flex align-items-center justify-content-center">
+        <ul class="list-group w-75">
             @if (is_numeric($id) && isset($series[$id]))
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     <a href="{{ route('seasons.index', $id) }}">{{ $series[$id]->name }}</a>

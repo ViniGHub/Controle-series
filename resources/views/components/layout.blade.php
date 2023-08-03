@@ -8,17 +8,19 @@
 
     <link rel="stylesheet" href=" {{ asset('/css/app.css') }} ">
     <link rel="stylesheet" href=" {{ asset('/css/estilos.css') }}">
-    <link rel="shortcut icon" href=" {{ asset('/img/ViniFlix.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href=" {{ asset('/img/V-logo.png') }}" type="image/x-icon">
 
     <title>{{ $title }} - Controle Séries</title>
 </head>
 
 <body>
-    <div class="d-flex row w-100 cont">
-        <aside class="p-4 d-flex flex-column justify-center col-3 ">
-            <h1 class="align-self-center"><a href="{{ route('series.index') }}"><img src="https://fontmeme.com/permalink/230801/ea5a4bc126828c9d792681daf3f76ed3.png"
-                        alt="fonte-bebas-neue" border="0"></a></h1>
-            <a href="#">
+    <div class="d-flex w-100 cont">
+        <aside class="p-4 d-flex flex-column justify-center" id="sideBar">
+            <a href="#" onclick="navbar()" id="imgNav">
+                {{-- <img src="https://fontmeme.com/permalink/230801/ea5a4bc126828c9d792681daf3f76ed3.png"alt="fonte-bebas-neue" border="0"> --}}
+                <img src="{{ asset('/img/V-logo.png') }}" alt="">
+            </a>
+            <a href="#" class="icon-edit">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25"
                     viewBox="0,0,256,256" style="fill:#000000;">
                     <g fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
@@ -31,9 +33,11 @@
                             </path>
                         </g>
                     </g>
-                </svg>Editar</a>
+                </svg>
+                <span>Editar</span>
+            </a>
         </aside>
-        <main class="p-4 d-flex flex-column col-9">
+        <main class="p-4 d-flex flex-column align-items-center w-100">
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -50,6 +54,8 @@
             {{ $slot }}
         </main>
     </div>
+
+    <script src="{{ asset('/js/navbar.js') }}"></script>
 </body>
 
 </html>
