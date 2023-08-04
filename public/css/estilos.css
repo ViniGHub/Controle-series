@@ -1,12 +1,7 @@
 aside a {
     text-decoration: none;
-<<<<<<< HEAD
-    color: rgb(121, 121, 121);
-    margin-left: 10px;
-=======
     color: rgb(255, 0, 0);
     transition: .75s;
->>>>>>> 1f2e0b4fd74d24fe0a0603285603cf85fbac6f94
     
 }
 
@@ -18,9 +13,6 @@ aside a {
 a svg {
     margin-right: 10px;
     color: red;
-<<<<<<< HEAD
-}
-=======
 }
 
 li>a {
@@ -99,4 +91,3 @@ ul>li {
         background-size: 110%;
     }
 }
->>>>>>> 1f2e0b4fd74d24fe0a0603285603cf85fbac6f94

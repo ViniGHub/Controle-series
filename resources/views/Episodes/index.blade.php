@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<x-layout title="Episódios de série">
-    <h1>Ola mundo</h1>
-</x-layout>
-=======
 <x-layout title="Episódios {!! $season !!}">
 
     <div class="my-2 w-75">
@@ -24,4 +19,3 @@
         console.log(series);
     </script>
 </x-layout>
->>>>>>> 1f2e0b4fd74d24fe0a0603285603cf85fbac6f94
