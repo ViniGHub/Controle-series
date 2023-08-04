@@ -49,7 +49,7 @@
                 </div>
 
             @endif
-            <h2>{{ $title }}</h2>
+            <h2 class="text-light">{{ $title }}</h2>
 
             {{ $slot }}
         </main>

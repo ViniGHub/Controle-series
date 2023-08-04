@@ -39,7 +39,7 @@ li>a:hover {
     border: 10px solid;
     border-image-slice: 1;
     border-width: 5px;
-    border-image-source: linear-gradient(to bottom, black, transparent);
+    border-image-source: linear-gradient(to bottom, black, transparent 80%);
     border-left: 0;
     border-top: 0;
     border-bottom: 0;
@@ -54,7 +54,7 @@ a>img {
 }
 
 .back-cinema {
-    background: url('../img/cinema.jfif') 1%;
+    background: url('../img/cinema-back.jfif') 1%;
     font-weight: 900;
     background-repeat: no-repeat;
     background-position: center;
@@ -85,6 +85,25 @@ ul>li {
 .btn-popcorn:hover .back-cinema {
     color: #fff;
 }
+
+/* .btn-add {
+    width: 200px;
+    font-weight: 800;
+    font-size: 30px;
+    background: url('../img/cinema-back.jfif') 1%;
+    font-weight: 900;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.btn-add:hover {
+    color: white;
+    background: rgb(100, 100, 100);
+} */
 
 @keyframes move-image {
     50% {
