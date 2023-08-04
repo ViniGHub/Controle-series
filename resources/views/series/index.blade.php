@@ -38,7 +38,7 @@
             @endif
         </ul>
     </div>
-    <a href=" {{ route('series.create') }} " class="btn btn-popcorn btn-outline-dark"><span class="back-cinema">Adicionar</span></a>
+    <a href=" {{ route('series.create') }} " class="btn btn-dark">Adicionar</a>
 
     <script>
         const series = {{ Js::from($series) }};
