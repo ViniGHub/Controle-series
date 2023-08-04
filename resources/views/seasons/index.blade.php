@@ -1,6 +1,6 @@
 <x-layout title="Temporadadas de {!! $series->name !!}">
 
-    <div class="my-2">
+    <div class="my-2 w-75">
         <ul class="list-group">
             {{-- @if (is_numeric($id) && isset($series[$id]))
                 <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -19,7 +19,7 @@
             @else --}}
                 @foreach ($seasons as $season)
                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Temporada: {{ $season->number }}
+                        <a href="{{ route('episodes.index') }}">Temporada: {{ $season->number }}</a>
 
                         <span class="badge bg-secondary">
                             {{ $season->episodes->count() }}
