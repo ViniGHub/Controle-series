@@ -1,4 +1,4 @@
-<x-layout title="ViniFlix">
+<x-layout title="Séries">
 
     @if ($mensagem)
         <h3 class="alert alert-success"> {{ $mensagem }} </h3>

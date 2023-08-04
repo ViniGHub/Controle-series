@@ -3,6 +3,7 @@
 use App\Http\Controllers\ControllerEpisodes;
 use App\Http\Controllers\ControllerSeasons;
 use App\Http\Controllers\ControllerSeries;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,3 +30,5 @@ Route::resource('/series', ControllerSeries::class)->except(['show']);
 Route::get('/series/{series}/seasons', [ControllerSeasons::class, 'index'])->name('seasons.index');
 
 Route::get('/seasons/{season}/episodes', [ControllerEpisodes::class, 'index'])->name('episodes.index');
+
+Route::post('/seasons/{season}/episodes', [ControllerEpisodes::class, 'update'])->name('episodes.update');

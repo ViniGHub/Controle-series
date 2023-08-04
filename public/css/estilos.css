@@ -86,24 +86,18 @@ ul>li {
     color: #fff;
 }
 
-/* .btn-add {
-    width: 200px;
-    font-weight: 800;
-    font-size: 30px;
-    background: url('../img/cinema-back.jfif') 1%;
-    font-weight: 900;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+#epCheck {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border:1px solid #333;
+    /* background-color: darkred; */
+    border-radius: 4px;
 }
 
-.btn-add:hover {
-    color: white;
-    background: rgb(100, 100, 100);
-} */
+#epCheck:checked {
+    background-color: darkred;
+}
 
 @keyframes move-image {
     50% {
