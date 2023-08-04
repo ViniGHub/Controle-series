@@ -14,13 +14,6 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-    <div class="d-flex row w-100 h-100">
-        <aside class="p-4 d-flex flex-column col-3 ">
-            <h1><a href="#"><img src="https://fontmeme.com/permalink/230801/ea5a4bc126828c9d792681daf3f76ed3.png"
-                        alt="fonte-bebas-neue" border="0"></a></h1>
-            <a href="#">
-=======
     <div class="d-flex w-100 cont">
         <aside class="p-4 d-flex flex-column justify-center" id="sideBar">
             <a href="#" onclick="navbar()" id="imgNav">
@@ -28,7 +21,6 @@
                 <img src="{{ asset('/img/V-logo.png') }}" alt="">
             </a>
             <a href="#" class="icon-edit">
->>>>>>> 1f2e0b4fd74d24fe0a0603285603cf85fbac6f94
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25"
                     viewBox="0,0,256,256" style="fill:#000000;">
                     <g fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
