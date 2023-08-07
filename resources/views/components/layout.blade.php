@@ -10,6 +10,8 @@
     <link rel="stylesheet" href=" {{ asset('/css/estilos.css') }}">
     <link rel="shortcut icon" href=" {{ asset('/img/V-logo.png') }}" type="image/x-icon">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>{{ $title }} - Controle Séries</title>
 </head>
 
@@ -20,7 +22,7 @@
                 {{-- <img src="https://fontmeme.com/permalink/230801/ea5a4bc126828c9d792681daf3f76ed3.png"alt="fonte-bebas-neue" border="0"> --}}
                 <img src="{{ asset('/img/V-logo.png') }}" alt="">
             </a>
-            <a href="#" class="icon-edit">
+            <a href="{{ route('series.index') }}" class="icon-edit">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25"
                     viewBox="0,0,256,256" style="fill:#000000;">
                     <g fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
