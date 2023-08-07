@@ -8,15 +8,15 @@
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Episódio: {{ $episode->number }}
 
-                        <input 
-                        type="checkbox" 
-                        name="epCheck[]" 
-                        id="epCheck" 
-                        value="{{ $episode->id }}"
-                        @if ($episode->watched)
-                            checked
-                        @endif
-                        >
+                        <div class="d-flex align-items-center justify-content-center">
+                            <input type="checkbox" name="epCheck[]" id="epCheck{{ $episode->id }}"
+                                value="{{ $episode->id }}" 
+                                @if ($episode->watched) checked @endif>
+
+                            <label class="d-flex align-items-center justify-content-center" for="epCheck{{ $episode->id }}">
+                                <i class="fa-solid fa-check"></i>
+                            </label>
+                        </div>
                     </li>
                 @endforeach
             </ul>
