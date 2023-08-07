@@ -1,3 +1,9 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 aside a {
     text-decoration: none;
     color: rgb(255, 0, 0);
@@ -33,7 +39,7 @@ li>a:hover {
 
 .cont>aside {
     background: rgb(35, 35, 35);
-    width: 7vw;
+    width: max-content;
     transition: 0.75s;
     transition-timing-function: ease;
     border: 10px solid;
