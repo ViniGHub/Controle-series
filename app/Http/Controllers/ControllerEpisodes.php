@@ -29,7 +29,7 @@ class ControllerEpisodes extends Controller
         });
 
         } else {
-            $season->Episodes->each(function (Episode $episode) use ($watchedEps) {
+            $season->Episodes->each(function (Episode $episode) {
                 $episode->watched = false;
             });
         }

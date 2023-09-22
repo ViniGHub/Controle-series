@@ -3,7 +3,7 @@
 use App\Http\Controllers\ControllerEpisodes;
 use App\Http\Controllers\ControllerSeasons;
 use App\Http\Controllers\ControllerSeries;
-
+use App\Http\Controllers\ControllerTeste;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ControllerTeste::class, 'teste'])->name('teste');
 
 Route::get('/ola', function () { ?>
 //     <h1 style="display: grid; place-items: center;">Olá Mundo</h1>

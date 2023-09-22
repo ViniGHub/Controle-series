@@ -2,15 +2,15 @@ let aside = document.querySelector('#sideBar');
 let imgNav = document.querySelector('#imgNav');
 
 function navbar() {
-    if (aside.style.width == "25vw") {
-        aside.style.width = "7vw";
-        imgNav.style.position = "relative";
-        imgNav.style.left = "0px";
-        return;
-    }
+    // if (aside.style.width == "7vw") {
+    //     aside.style.overflow = 'hidden';
+    //     aside.style.width = "0";
+    //     aside.classList.remove('p-4');
+    //     imgNav.style.marginLeft = '0';
+    //     return;
+    // }
 
-    imgNav.style.position = "absolute";
-    imgNav.style.left = "100px";
-    aside.style.width = "25vw";
+    // aside.classList.add('p-4');
+    // aside.style.width = "7vw";
 
 }
