@@ -28,6 +28,8 @@
                 <i class="fa-solid fa-pencil" style="color: #ff0000; font-size: 20px"></i>
                 <span>Editar</span>
             </a>
+
+            <div><a class="bars m-2" onclick="navbar()" href="#"><i class="fa-solid fa-bars mt-2" style="display: none; font-size: 20px"></i></a></div>
         </aside>
         <main class="p-4 d-flex flex-column align-items-center w-100">
             @if ($errors->any())
@@ -48,6 +50,7 @@
     </div>
 
     <script src="{{ asset('/js/navbar.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </body>
 
 </html>

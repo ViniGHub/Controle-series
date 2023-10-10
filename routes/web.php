@@ -17,11 +17,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [ControllerTeste::class, 'teste'])->name('teste');
+Route::get('/', function() {
+    return to_route('series.index');
+});
 
 Route::get('/ola', function () { ?>
-//     <h1 style="display: grid; place-items: center;">Olá Mundo</h1>
-// <?php });
+     <h1 style="display: grid; place-items: center;">Olá Mundo</h1>
+ <?php });
 
 Route::resource('/series', ControllerSeries::class)->except(['show']);
 
