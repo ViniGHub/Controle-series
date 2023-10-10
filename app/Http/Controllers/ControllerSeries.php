@@ -7,6 +7,7 @@ use App\Models\Series;
 use App\Repositories\EloquentSeriesRepository;
 use App\Repositories\SeriesRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ControllerSeries extends Controller
 {

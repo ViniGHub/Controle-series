@@ -5,8 +5,8 @@
     @endif
 
     <div class="my-3">
-        <label for="nome" class="form-label">Nome da Série</label>
-        <input type="text" id="nome" name="nome" placeholder="Digite o nome da série aqui"
+        <label for="nome" class="form-label text-light">Nome da Série</label>
+        <input type="text" id="nome" name="name" placeholder="Digite o nome da série aqui"
             class="form-control"
             @isset($name)
                 value="{{ $name }}"
