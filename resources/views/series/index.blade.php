@@ -44,6 +44,5 @@
 
     <script>
         const series = {{ Js::from($series) }};
-        console.log(series);
     </script>
 </x-layout>

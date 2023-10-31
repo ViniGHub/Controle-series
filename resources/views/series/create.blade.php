@@ -11,7 +11,7 @@
             </div>
 
             <div class="col-2">
-                <label for="season" class="form-label">Temporada</label>
+                <label for="season" class="form-label text-white">Temporada</label>
                 <input type="number" id="season" name="season"
                     placeholder="N° de Temporadas" class="form-control"
                     value="{{ old('season') }}">

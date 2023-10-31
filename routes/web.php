@@ -5,6 +5,7 @@ use App\Http\Controllers\ControllerSeasons;
 use App\Http\Controllers\ControllerSeries;
 use App\Http\Controllers\ControllerTeste;
 use Illuminate\Support\Facades\Route;
+use PHPUnit\TextUI\XmlConfiguration\Logging\TeamCity;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +23,7 @@ Route::get('/', function() {
 });
 
 Route::get('/ola', function () { ?>
-     <h1 style="display: grid; place-items: center;">Olá Mundo</h1>
+     <h1 style="box-sizing:border-box; display: grid; place-items: center; ">Olá Mundo</h1>
  <?php });
 
 Route::resource('/series', ControllerSeries::class)->except(['show']);
