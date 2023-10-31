@@ -12,7 +12,9 @@ aside a {
 }
 
 .icon-edit {
-    position: absolute;
+    display: flex;
+    gap: 10px;
+    margin-top: 10px  ;
     top: 100px;
 }
 
@@ -37,9 +39,15 @@ li>a:hover {
     height: 100vh;
 }
 
+.bars {
+    position: relative;
+}
+
 .cont>aside {
     background: rgb(35, 35, 35);
+    overflow: hidden;
     width: max-content;
+    min-width: 125px;
     transition: 0.75s;
     transition-timing-function: ease;
     border: 10px solid;

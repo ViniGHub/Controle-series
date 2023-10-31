@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -26,7 +26,7 @@
             </a>
             <a href="{{ route('series.index') }}" class="icon-edit">
                 <i class="fa-solid fa-pencil" style="color: #ff0000; font-size: 20px"></i>
-                <span>Editar</span>
+                <p>Editar</p>
             </a>
 
             <div><a class="bars m-2" onclick="navbar()" href="#"><i class="fa-solid fa-bars mt-2" style="display: none; font-size: 20px"></i></a></div>
@@ -49,8 +49,8 @@
         </main>
     </div>
 
-    <script src="{{ asset('/js/navbar.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="{{ asset('/js/navbar.js') }}"></script>
 </body>
 
 </html>

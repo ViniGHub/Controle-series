@@ -1,4 +1,4 @@
-<x-layout title="Episódios da temporada {!! $season->number !!}">
+<x-layout title="Episódios {!! $season->number !!}">
 
     <form method="POST" class="w-100 d-flex flex-column align-items-center">
         @csrf
