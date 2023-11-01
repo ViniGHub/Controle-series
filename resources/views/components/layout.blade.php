@@ -10,9 +10,13 @@
     <link rel="stylesheet" href=" {{ asset('/css/estilos.css') }}">
     <link rel="shortcut icon" href=" {{ asset('/img/V-logo.ico') }}" type="image/x-icon">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>{{ $title }} - Controle Séries</title>
 </head>
@@ -29,7 +33,12 @@
                 <p>Editar</p>
             </a>
 
-            <div><a class="bars m-2" onclick="navbar()" href="#"><i class="fa-solid fa-bars mt-2" style="display: none; font-size: 20px"></i></a></div>
+            <div>
+                <a class="bars m-2" onclick="navbar()" href="#">
+                    <i class="fa-solid fa-bars mt-2"
+                        style="display: none; font-size: 20px"></i>
+                </a>
+            </div>
         </aside>
         <main class="p-4 d-flex flex-column align-items-center w-100">
             @if ($errors->any())
@@ -44,6 +53,10 @@
 
             @endif
             <h2 class="text-light">{{ $title }}</h2>
+
+            @isset($mensagem)
+                <h3 class="alert alert-success"> {{ $mensagem }} </h3>
+            @endisset
 
             {{ $slot }}
         </main>

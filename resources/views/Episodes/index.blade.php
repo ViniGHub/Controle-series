@@ -1,4 +1,4 @@
-<x-layout title="Episódios {!! $season->number !!}">
+<x-layout title="Episódios {!! $season->number !!}" :mensagem="$mensagem">
 
     <form method="POST" class="w-100 d-flex flex-column align-items-center">
         @csrf
@@ -29,6 +29,6 @@
     </form>
     <script>
         const series = {{ Js::from($episodes) }};
-        console.log(series);
+        // console.log(series);
     </script>
 </x-layout>

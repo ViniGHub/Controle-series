@@ -16,11 +16,15 @@ class Season extends Model
 
     public function Series() 
     {
-        return $this->belongsTo(Serie::class);    
+        return $this->belongsTo(Series::class);    
     }
 
     public function Episodes() 
     {
         return $this->hasMany(Episode::class);    
+    }
+
+    public function numberWatchedEpisodes(): int {
+        return $this->episodes->filter(fn ($episode) => $episode->watched)->count();
     }
 }

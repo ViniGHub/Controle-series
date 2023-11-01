@@ -6,8 +6,10 @@
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <a href="{{ route('episodes.index', $season->id) }}">Temporada {{ $season->number }}</a>
 
-                        <span class="badge bg-secondary">
-                            {{ $season->episodes->count() }}
+                        <span 
+                        class="badge 
+                        @if ($season->numberWatchedEpisodes()/$season->episodes->count() != 1) bg-secondary @else bg-primary @endif">
+                            {{ $season->numberWatchedEpisodes() }} / {{ $season->episodes->count() }} 
                         </span>
                     </li>
                 @endforeach
