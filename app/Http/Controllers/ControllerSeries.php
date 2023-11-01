@@ -6,6 +6,8 @@ use App\Http\Requests\SeriesFormRequest;
 use App\Models\Series;
 use App\Repositories\EloquentSeriesRepository;
 use App\Repositories\SeriesRepository;
+use Exception;
+use Hamcrest\Type\IsNumeric;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -30,7 +32,12 @@ class ControllerSeries extends Controller
 
     public function store(SeriesFormRequest $request)
     {
-        $serie = $this->seriesRepository->add($request);
+        try {
+            $serie = $this->seriesRepository->add($request);
+        } catch (Exception $e) {
+            dd($e->getMessage());
+        }
+        
 
         return to_route('series.index')->with('mensagem.sucesso', 'Série ' . $serie->nome . ' adicionada com sucesso.');
     }
