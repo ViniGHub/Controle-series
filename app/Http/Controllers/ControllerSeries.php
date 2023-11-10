@@ -35,7 +35,7 @@ class ControllerSeries extends Controller
         try {
             $serie = $this->seriesRepository->add($request);
         } catch (Exception $e) {
-            dd($e->getMessage());
+            dd($e->getMessage(), $e->getTraceAsString());
         }
         
 

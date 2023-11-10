@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --max-size-eps: 70vh;
+}
+
 aside a {
     text-decoration: none;
     color: rgb(255, 0, 0);
@@ -124,6 +128,10 @@ input ~ label {
     font-size: 15px;
     position: absolute;
     font-weight: 900;
+}
+
+#tempEps {
+    max-height: var(--max-size-eps)
 }
 
 @keyframes move-image {
