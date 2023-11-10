@@ -64,6 +64,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="{{ asset('/js/navbar.js') }}"></script>
+    <script src="{{ asset("/js/temps.js") }}"></script>
 </body>
 
 </html>

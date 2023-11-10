@@ -6,7 +6,7 @@
             <ul class="list-group">
                 @foreach ($episodes as $episode)
                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Episódio: {{ $episode->number }}
+                        Episódio {{ $episode->number }}
 
                         <div class="d-flex align-items-center justify-content-center">
                             <input type="checkbox" name="epCheck[]" id="epCheck{{ $episode->id }}"
