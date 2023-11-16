@@ -1,4 +1,4 @@
-<x-layout title="Episódios {!! $season->number !!}" :mensagem="$mensagem">
+<x-layout title="Episódios {!! $season->number !!}" :mensagem="$mensagem" back="seasons.index" :backP="$serie->id">
 
     <form method="POST" class="w-100 d-flex flex-column align-items-center">
         @csrf

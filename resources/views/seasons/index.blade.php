@@ -1,4 +1,4 @@
-<x-layout title="Temporadadas {!! $series->name !!}">
+<x-layout title="Temporadadas {!! $series->name !!}" back='series.index'>
 
     <div class="my-2 w-75">
         <ul class="list-group">

@@ -1,4 +1,4 @@
-<x-layout title="Adicionar Série">
+<x-layout title="Adicionar Série" back='series.index'>
 
     <form id="form-series" class="w-75 h-100 d-flex flex-column" action=" {{ route('series.store') }} " method="POST">
         @csrf

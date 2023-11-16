@@ -18,7 +18,7 @@ class ControllerEpisodes extends Controller
     }
     public function index(Season $season)
     {
-        return view('episodes.index')->with('episodes', $season->episodes)->with('season', $season)->with('mensagem', session('mensagem.sucesso'));
+        return view('episodes.index')->with('episodes', $season->episodes)->with('season', $season)->with('mensagem', session('mensagem.sucesso'))->with('serie', $season->Series);
     }
 
     public function update(Request $request, Season $season, EloquentSeriesRepository $seriesRepository)
