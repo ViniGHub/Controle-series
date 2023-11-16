@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\DB;
 class EloquentSeriesRepository implements SeriesRepository
 {
     public function add(SeriesFormRequest $request): Series {
-        dd($request->all());
         return DB::transaction(function () use ($request) {
             $serie = Series::create($request->all());
 
@@ -30,7 +29,6 @@ class EloquentSeriesRepository implements SeriesRepository
             $episodes = [];
             $i = 0;
             foreach ($serie->seasons as $season) {
-                var_dump($i);
                 for ($j = 1; $j <= $request->episode[$i]; $j++) {
                     $episodes[] = [
                         'season_id' => $season->id,

@@ -41,6 +41,20 @@
             </div>
         </aside>
         <main class="p-4 d-flex flex-column align-items-center w-100">
+            @isset ($back)
+                <div style="align-self: flex-start;">
+                    <a 
+                    @if (isset($backP)) 
+                        href="{{ route($back, $backP) }}"
+                    @else
+                        href="{{ route($back) }}"
+                    @endif
+                    >
+                        <i class="fa-solid fa-arrow-left-long" style="color: #ff0000; font-size: 30px;"></i>
+                    </a>
+                </div>
+            @endisset
+            
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>

@@ -10,7 +10,8 @@ class Series extends Model
 {
     use HasFactory;
     protected $fillable =[
-        'name'
+        'name',
+        'color'
     ];
 
     // protected $with = ['seasons'];
