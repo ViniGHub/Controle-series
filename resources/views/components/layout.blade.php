@@ -40,7 +40,7 @@
                 </a>
             </div>
         </aside>
-        <main class="p-4 d-flex flex-column align-items-center w-100">
+        <main class="p-4 d-flex flex-column align-items-center w-100 mh-100">
             @isset ($back)
                 <div style="align-self: flex-start;">
                     <a 

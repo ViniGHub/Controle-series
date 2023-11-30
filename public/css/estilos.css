@@ -12,7 +12,6 @@ aside a {
     text-decoration: none;
     color: rgb(255, 0, 0);
     transition: .75s;
-    color: ;
 }
 
 .icon-edit {
@@ -87,7 +86,7 @@ ul>li {
     background: rgb(255, 255, 255);
 }
 
-.btn-popcorn {
+.btn-effect {
     width: 25%;
     font-weight: 700;
     font-size: 30px;
@@ -96,12 +95,23 @@ ul>li {
     background: rgb(255, 255, 255);
 }
 
-.btn-popcorn:hover {
+.btn-effect:hover {
     background: rgb(100, 100, 100);
 }
 
-.btn-popcorn:hover .back-cinema {
+.btn-effect span {
+    font-weight: 900;
+}
+
+
+.btn-effect:hover span {
     color: #fff;
+    transition: .5s;
+}
+
+.btn-effect span:hover {
+    color: red;
+
 }
 
 input[type="checkbox"] {
@@ -132,6 +142,12 @@ input ~ label {
 
 #tempEps {
     max-height: var(--max-size-eps)
+}
+
+#tempEps span {
+    color: #ffffff;
+    display: block;
+    text-shadow: 0px 0px 5px #ffffff;
 }
 
 @keyframes move-image {

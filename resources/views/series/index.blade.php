@@ -35,8 +35,8 @@
             @endif
         </ul>
     </div>
-    <a href=" {{ route('series.create') }} " class="btn btn-popcorn btn-add">
-        <span class="back-cinema">Adicionar</span>
+    <a href=" {{ route('series.create') }} " class="btn btn-effect btn-add">
+        <span>A</span><span>d</span><span>i</span><span>c</span><span>i</span><span>o</span><span>n</span><span>a</span><span>r</span>
     </a>
 
     <script>

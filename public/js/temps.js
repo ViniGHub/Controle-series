@@ -8,7 +8,7 @@ if (season != null) {
         for (let i = 1; i <= seasons && seasons <= 10; i++) {
             $("#tempEps").append(`
         <div class="p-2">
-            <label for="episode${i}" class="form-label text-white">Temporada ${i} Episodios</label>
+            <label for="episode${i}" class="form-label text-white">Temporada ${i} <span>Episodios</span> </label>
             <input type="number" id="episode${i}" name="episode[]"
                 placeholder="N° Eps." class="form-control" required max="20">
         </div>
