@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href=" {{ asset('/css/app.css') }} ">
-    <link rel="stylesheet" href=" {{ asset('/css/estilos.css') }}">
+    <link rel="stylesheet" href=" {{ asset('/css/series.css') }}">
     <link rel="shortcut icon" href=" {{ asset('/img/V-logo.ico') }}" type="image/x-icon">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"

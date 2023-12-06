@@ -22,8 +22,8 @@
             </ul>
         </div>
 
-        <button class="btn btn-popcorn btn-add">
-            <span class="back-cinema">Salvar</span>
+        <button class="btn btn-effect btn-add">
+            <span>Salvar</span>
         </button>
 
     </form>

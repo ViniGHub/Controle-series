@@ -87,10 +87,12 @@ ul>li {
 }
 
 .btn-effect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 25%;
     font-weight: 700;
     font-size: 30px;
-    /* text-shadow: 0 5px 7px rgba(255, 255, 255, 0.3); */
     box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
     background: rgb(255, 255, 255);
 }
@@ -101,12 +103,12 @@ ul>li {
 
 .btn-effect span {
     font-weight: 900;
+    transition: .5s;
 }
 
 
 .btn-effect:hover span {
     color: #fff;
-    transition: .5s;
 }
 
 .btn-effect span:hover {

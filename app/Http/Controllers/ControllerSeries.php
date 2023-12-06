@@ -21,7 +21,9 @@ class ControllerSeries extends Controller
     // Método para exibir todas as séries ou filtrar por ID se fornecido na requisição
     public function index(Request $request)
     {
+        // Recupera o index da series especifica que deseja acessar
         $id = $request->id ?? '';
+
         // Obtém todas as séries do banco de dados
         $series = Series::all();
         
