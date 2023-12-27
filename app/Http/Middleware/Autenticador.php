@@ -17,9 +17,11 @@ class Autenticador
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (!Auth::check()) {
-            error_log(Auth::getRequest());
+
+        if (!Auth::check() && !is_numeric(array_search($request->path(),['login', 'user']))) {
             throw new AuthenticationException();
+        } else if (Auth::check() && is_numeric(array_search($request->path(),['login', 'user']))) {
+            return to_route('series.index');
         }
         
         return $next($request);

@@ -25,11 +25,24 @@
 
 <body>
     <main class="login_page">
+
+        @if ($errors->any())
+            <div class="alert alert-danger position-absolute align-self-start mt-4">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <div class="login_field">
 
-            <img src="{{ asset('/img/V-Logo.ico') }}" alt="Logo controle de series" class="img_icon">
+            {{-- <img src="{{ asset('/img/viniflixr.png') }}" alt="Logo controle de series" class="img_icon"> --}}
+            <h1>VINIFLIX</h1>
 
-            <div class = 'toggle-switch'>
+
+            <div style="justify-self: end" class = 'toggle-switch'>
                 <label>
                     <input type = 'checkbox'>
                     <span class = 'slider'></span>
@@ -40,19 +53,21 @@
                 </label>
             </div>
 
+
+
             <div class="forms">
 
-                <form action="{{ route('series.index') }}" method="post" id="form_login" class="login_user">
+                <form action="{{ route('user.store') }}" method="post" id="form_login" class="login_user">
                     @csrf
                     <h1 style="color: rgb(50, 50, 50); align-self: center" class="mb-4">Login</h1>
 
                     <div class="form_camp_name">
-                        <input type="text" name="name" id="nome">
-                        <label for="nome" class="login_label">Usuario</label>
+                        <input inputform type="text" name="name" id="nome">
+                        <label for="nome" class="login_label">Nome</label>
                     </div>
 
                     <div class="form_camp_pass">
-                        <input type="text" name="password" id="senha">
+                        <input inputform type="password" name="password" id="senha">
                         <label for="senha" class="pass_label">Senha</label>
                     </div>
 
@@ -62,19 +77,23 @@
 
                 <form action="{{ route('user.store') }}" method="post" id="form_register" class="register_user">
                     @csrf
-                    @method('INSERT')
+
                     <h1 style="color: rgb(50, 50, 50); align-self: center" class="mb-4">Cadastro</h1>
 
                     <div class="form_camp_name">
-                        <input type="text" name="reg_name" id="reg_name">
-                        <label for="reg_name" class="login_label">Usuario</label>
+                        <input inputform type="text" name="name" id="reg_name">
+                        <label for="reg_name" class="login_label">Nome</label>
+                    </div>
+
+                    <div class="form_camp_email">
+                        <input inputform type="text" name="email" id="reg_email">
+                        <label for="reg_email" class="login_label">Email</label>
                     </div>
 
                     <div class="form_camp_pass">
-                        <input type="text" name="reg_password" id="reg_password">
-                        <label for="reg_password" class="pass_label">Senha</label>
+                        <input inputform type="password" name="password" id="reg_password">
+                        <label for="reg_password" class="login_label">Senha</label>
                     </div>
-
 
                     <input type="submit" form="form_register" class="align-self-center login_btn" value="Cadastrar">
                 </form>
@@ -85,36 +104,21 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-        $('.form_camp_name > input').on('input', () => {
-            $('.form_camp_name > input').each(function(index, value)  {
-                let labels = $('.form_camp_name > label');
-                if (value.value !== '') {
+        $('form input[inputform]').on('input', () => {
+            $('form input[inputform]').each(function(index, input) {
+                let labels = $('form label');
+
+                if (input.value !== '') {
                     labels[index].classList.add('move_label');
-                    labels[index].style.color = 'rgba(50, 50, 50, 1)';
+
                 } else {
                     labels[index].classList.remove('move_label');
-                    labels[index].style.color = 'rgba(50, 50, 50, 0.5)';
 
                 }
             });
 
         });
 
-        $('.form_camp_pass > input').on('input', () => {
-            $('.form_camp_pass > input').each(function(index, value)  {
-                let labels = $('.form_camp_pass > label');
-                if (value.value !== '') {
-                    labels[index].classList.add('move_label');
-                    labels[index].style.color = 'rgba(50, 50, 50, 1)';
-
-                } else {
-                    labels[index].classList.remove('move_label');
-                    labels[index].style.color = 'rgba(50, 50, 50, 0.5)';
-
-                }
-            });
-
-        });
 
         $('input[type="checkbox"]').on('change', () => {
             if ($('input[type="checkbox"]').is(':checked')) {
