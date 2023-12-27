@@ -41,3 +41,7 @@ Route::get('/series/{series}/seasons', [ControllerSeasons::class, 'index'])->nam
 Route::get('/seasons/{season}/episodes', [ControllerEpisodes::class, 'index'])->name('episodes.index')->middleware(Autenticador::class);
 
 Route::post('/seasons/{season}/episodes', [ControllerEpisodes::class, 'update'])->name('episodes.update')->middleware(Autenticador::class);
+
+Route::get('/{any}', function () {
+    return to_route('series.index');
+});
