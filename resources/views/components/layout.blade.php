@@ -32,6 +32,12 @@
                 <i class="fa-solid fa-pencil" style="color: #ff0000; font-size: 20px"></i>
                 <p>Editar</p>
             </a>
+            <form action="{{ route('user.destroy', 1) }}" method="POST" class="icon-edit">
+                @csrf
+                @method('DELETE')
+                {{-- <i class="fa-solid fa-out" style="color: #ff0000; font-size: 20px"></i> --}}
+                <button style="color: #ff0000; background: none; font-weight: 900;">Sair</button>
+            </form>
 
             <div>
                 <a class="bars m-2" onclick="navbar()" href="#">
@@ -59,7 +65,7 @@
                 <div class="alert alert-danger">
                     <ul>
                         @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
+                            <li style="list-style: none">{{ $error }}</li>
                         @endforeach
 
                     </ul>

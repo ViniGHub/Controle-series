@@ -39,7 +39,7 @@ li>a:hover {
 
 .cont {
     background: rgb(50, 50, 50);
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .bars {

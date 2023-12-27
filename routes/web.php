@@ -30,14 +30,14 @@ Route::get('/', function() {
 
 Route::get('/login', function () {
     return to_route('user.index');
-})->name('login');
+})->name('login')->middleware(Autenticador::class);
 
-Route::resource('/user', ControllerUsers::class)->only(['index', 'store']);
+Route::resource('/user', ControllerUsers::class)->only(['index', 'store', 'destroy'])->middleware(Autenticador::class);
 
-Route::resource('/series', ControllerSeries::class)->except(['show']);
+Route::resource('/series', ControllerSeries::class)->except(['show'])->middleware(Autenticador::class);
 
-Route::get('/series/{series}/seasons', [ControllerSeasons::class, 'index'])->name('seasons.index');
+Route::get('/series/{series}/seasons', [ControllerSeasons::class, 'index'])->name('seasons.index')->middleware(Autenticador::class);
 
-Route::get('/seasons/{season}/episodes', [ControllerEpisodes::class, 'index'])->name('episodes.index');
+Route::get('/seasons/{season}/episodes', [ControllerEpisodes::class, 'index'])->name('episodes.index')->middleware(Autenticador::class);
 
-Route::post('/seasons/{season}/episodes', [ControllerEpisodes::class, 'update'])->name('episodes.update');
+Route::post('/seasons/{season}/episodes', [ControllerEpisodes::class, 'update'])->name('episodes.update')->middleware(Autenticador::class);

@@ -30,8 +30,13 @@ body {
 }
 
 .login_field {
-    height: 60vh;
+
+    min-height: 600px;
+    height: 75vh;
+
+    min-width: 400px;
     width: 25vw;
+
     border-radius: 25px;
 
     background: rgb(255, 255, 255);
@@ -41,7 +46,23 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+
+.login_field > h1 {
+    -webkit-user-select: none;
+    user-select: none;
+
+    background: linear-gradient(to right, black, 50%, rgb(20, 20, 20));
+    text-shadow: 2px 2px 0px red;
+    color: transparent;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    font-size: 90px;
+    font-weight: 900;
+    margin-bottom: 75px;
 }
 
 .login_user {
@@ -65,8 +86,8 @@ body {
     display: flex;
 }
 
-.login_user input[type="text"],
-.register_user input[type="text"] {
+.login_user input[inputform],
+.register_user input[inputform]{
     margin-bottom: 30px;
     margin-left: 70px;
     border-radius: 10px;
@@ -77,14 +98,14 @@ body {
 
 }
 
-.login_user input[type="text"]:-webkit-autofill,
-.register_user input[type="text"]:-webkit-autofill,
-.login_user input[type="text"]:-webkit-autofill:hover,
-.register_user input[type="text"]:-webkit-autofill:hover,
-.login_user input[type="text"]:-webkit-autofill:focus,
-.register_user input[type="text"]:-webkit-autofill:focus,
-.login_user input[type="text"]:-webkit-autofill:active,
-.register_user input[type="text"]:-webkit-autofill:active {
+.login_user input[inputform]:-webkit-autofill,
+.register_user input[inputform]:-webkit-autofill,
+.login_user input[inputform]:-webkit-autofill:hover,
+.register_user input[inputform]:-webkit-autofill:hover,
+.login_user input[inputform]:-webkit-autofill:focus,
+.register_user input[inputform]:-webkit-autofill:focus,
+.login_user input[inputform]:-webkit-autofill:active,
+.register_user input[inputform]:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
@@ -93,7 +114,7 @@ body {
     color:  rgba(50, 50, 50, 0.5);
     position: relative;
     border-radius: 5px;
-    background: white;
+    background: transparent;
     font-weight: 500;
     left: -190px;
     top: 7px;
@@ -102,20 +123,25 @@ body {
     height: fit-content;
     /* margin-top: 7px;
     margin-left: 10px; */
-    transition: margin .5s;
+    transition: border .25s,
+    margin .5s,
+    background .25s;
 }
 
-.login_user input[type="text"]:focus~label,
-.register_user input[type="text"]:focus~label {
+.login_user input[inputform]:focus~label,
+.register_user input[inputform]:focus~label {
     margin-top: -30px;
     padding: -2px 2px;
-    color: rgba(50, 50, 50, 1) !important;
+    background: white;
+    color: rgba(50, 50, 50, 1);
     border: 2px rgb(50, 50, 50) solid;
 }
 
 .move_label {
     margin-top: -30px !important;
     border: 2px rgb(50, 50, 50) solid !important;
+    color: rgba(50, 50, 50, 1) !important;
+    background: white !important;
 }
 
 .login_user label:hover,
@@ -166,8 +192,10 @@ body {
 
 .img_icon {
     user-select: none;
-    height: 100px;
-    margin-top: 50px;
+    height: 300px;
+    width: 600px;
+    margin-right: 10px;
+    /* margin-bottom: 5%; */
     filter: drop-shadow(0px 0px 1px red);
 }
 
@@ -217,4 +245,8 @@ body {
 .toggle-switch input:checked~.slider::before {
     transform: translateX(30px);
     box-shadow: none;
+}
+
+@media (max-width:1600px) {
+    
 }
