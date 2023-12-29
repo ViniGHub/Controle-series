@@ -26,7 +26,7 @@ body {
 
 .forms {
     display: flex;
-    gap: 300px;
+    gap: 315px;
 }
 
 .login_field {

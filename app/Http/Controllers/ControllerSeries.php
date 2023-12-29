@@ -3,14 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\SeriesFormRequest;
+use App\Mail\SeriesCreated;
 use App\Models\Series;
 use App\Repositories\EloquentSeriesRepository;
 use App\Repositories\SeriesRepository;
 use Exception;
 use Hamcrest\Type\IsNumeric;
+use Illuminate\Contracts\Mail\Mailable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class ControllerSeries extends Controller
 {
@@ -44,9 +47,13 @@ class ControllerSeries extends Controller
     // Método para adicionar uma nova série ao banco de dados
     public function store(SeriesFormRequest $request)
     {
+
         try {
             // Adiciona uma nova série utilizando o repositório de séries
             $serie = $this->seriesRepository->add($request);
+
+            // Envia um email para o usuario que criou a série
+            Mail::to($request->user())->send(new SeriesCreated($serie->id , $serie->name, $request->season));
         } catch (Exception $e) {
             // Em caso de exceção, exibe a mensagem de erro
             dd($e->getMessage(), $e->getTraceAsString());

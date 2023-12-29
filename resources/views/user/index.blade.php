@@ -42,7 +42,7 @@
             <h1>VINIFLIX</h1>
 
 
-            <div style="justify-self: end" class = 'toggle-switch'>
+            <div style="" class = 'toggle-switch'>
                 <label>
                     <input type = 'checkbox'>
                     <span class = 'slider'></span>
@@ -58,6 +58,12 @@
             <div class="forms">
 
                 <form action="{{ route('user.store') }}" method="post" id="form_login" class="login_user">
+                    <div class="d-flex flex-column align-items-center justify-content-center align-self-center">
+                        <b class="gap-0 m-0 p-0">Conta teste</b>
+                        <p class="gap-0 m-0 p-0">Nome: vinipoh</p>
+                        <p class="gap-0 m-0 p-0">senha: qwe</p>
+                    </div>
+
                     @csrf
                     <h1 style="color: rgb(50, 50, 50); align-self: center" class="mb-4">Login</h1>
 
@@ -97,7 +103,8 @@
 
                     <input type="submit" form="form_register" class="align-self-center login_btn" value="Cadastrar">
                 </form>
-            </div>
+
+            </div> 
 
         </div>
     </main>

@@ -6,6 +6,9 @@ use App\Http\Controllers\ControllerSeries;
 use App\Http\Controllers\ControllerTeste;
 use App\Http\Controllers\ControllerUsers;
 use App\Http\Middleware\Autenticador;
+use App\Mail\SeriesCreated;
+use App\Models\Series;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use PHPUnit\TextUI\XmlConfiguration\Logging\TeamCity;
 
@@ -24,23 +27,29 @@ Route::get('/ola', function () { ?>
     <h1 style="box-sizing:border-box; display: grid; place-items: center; ">Olá Mundo</h1>
 <?php })->name('ola');
 
-Route::get('/', function() {
-    return to_route('series.index');
-})->middleware(Autenticador::class);
 
-Route::get('/login', function () {
-    return to_route('user.index');
-})->name('login')->middleware(Autenticador::class);
+Route::middleware(Autenticador::class)->group(function () {
+    Route::get('/', function () {
+        return to_route('series.index');
+    });
 
-Route::resource('/user', ControllerUsers::class)->only(['index', 'store', 'destroy'])->middleware(Autenticador::class);
+    Route::get('/login', function () {
+        return to_route('user.index');
+    })->name('login');
 
-Route::resource('/series', ControllerSeries::class)->except(['show'])->middleware(Autenticador::class);
+    Route::resource('/user', ControllerUsers::class)->only(['index', 'store', 'destroy']);
 
-Route::get('/series/{series}/seasons', [ControllerSeasons::class, 'index'])->name('seasons.index')->middleware(Autenticador::class);
+    Route::resource('/series', ControllerSeries::class)->except(['show']);
 
-Route::get('/seasons/{season}/episodes', [ControllerEpisodes::class, 'index'])->name('episodes.index')->middleware(Autenticador::class);
+    Route::get('/series/{series}/seasons', [ControllerSeasons::class, 'index'])->name('seasons.index');
 
-Route::post('/seasons/{season}/episodes', [ControllerEpisodes::class, 'update'])->name('episodes.update')->middleware(Autenticador::class);
+    Route::get('/seasons/{season}/episodes', [ControllerEpisodes::class, 'index'])->name('episodes.index');
+
+    Route::post('/seasons/{season}/episodes', [ControllerEpisodes::class, 'update'])->name('episodes.update');
+});
+
+Route::get('mail', fn () => new SeriesCreated(38 ,'Gen V', 2));
+
 
 Route::get('/{any}', function () {
     return to_route('series.index');
